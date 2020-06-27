@@ -27,7 +27,15 @@ test('does not throw warning with default props', () => {
 });
 
 describe('if there are words gussed', () => {
+  test('renders without error', () => {
 
+  });
+  test('renders "guessed words" section', () => {
+
+  });
+  test('correct number of guessed words', () => {
+
+  });
 });
 
 describe('if there are no words guessed', () => {
