@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import Congrats from './components/Congrats/Congrats';
 import GuessedWords from './components/GussedWords/GussedWords';
