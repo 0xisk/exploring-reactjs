@@ -4,12 +4,12 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import { findByTestAttr, checkProps } from '../../utils/testUtils';
 import GussedWords from './GussedWords';
 
-const defaultProps = [{
+const defaultProps = {
   gussedWords: [{
     gussedWords: 'train',
     letterMatchCount: 3
   }]
-}];
+};
 
 /**
  * Factory function to create a shallowWrapper for the GussedWords component. 

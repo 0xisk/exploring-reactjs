@@ -14,7 +14,12 @@ const GussedWords = (props) => {
 };
 
 GussedWords.propTypes = {
-
+  gussedWords: PropTypes.arrayOf(
+    PropTypes.shape({
+      gussedWords: PropTypes.string.isRequired,
+      letterMatchCount: PropTypes.number.isRequired
+    })
+  ).isRequired
 };
 
 export default GussedWords;
