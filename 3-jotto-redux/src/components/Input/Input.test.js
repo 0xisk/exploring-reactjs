@@ -12,7 +12,7 @@ import Input from './Input';
  */
 const setup = (initialState = {}) => {
   const store = storeFactory(initialState);
-  const wrapper = shallow(<Input store={store} />).dive();
+  const wrapper = shallow(<Input store={store} />).dive().dive();
   return wrapper;
 }
 
@@ -24,15 +24,15 @@ describe('render', () => {
       wrapper = setup(initialState);
     });
     test('renders component wihout error', () => {
-      const component = findByTestAttr(wrapper, 'component-input');
+      const component = findByTestAttr(wrapper, "component-input");
       expect(component.length).toBe(1);
     });
     test('renders input box', () => {
-      const inputBox = findByTestAttr(wrapper, 'input-box');
+      const inputBox = findByTestAttr(wrapper, "input-box");
       expect(inputBox.length).toBe(1);
     });
     test('renders submit button', () => {
-      const submitButton = findByTestAttr(wrapper, 'submit-button');
+      const submitButton = findByTestAttr(wrapper, "submit-button");
       expect(submitButton.length).toBe(1);
     });
   });
