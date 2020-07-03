@@ -39,8 +39,25 @@ describe('guessed action dispatcher', () => {
   });
 });
 describe('some guessed words', () => {
+  const guessedWords = [{
+    guessWord: 'agile', 
+    letterMatchCount: 1
+  }];
+  const initialState = {
+    guessedWord, secretWord
+  };
+  let store;
+  beforeEach(() => {
+    store = storeFactory(initialState);
+  });
   test('updates state correctly for unsuccessful guess', () => {
-
+    store.dispatch(guessWord(unsuccessfulGuess));
+    const newState = store.getState();
+    const expectedState = {
+      secretWord,
+      success: false,
+      guessedWords: [...guessedWords, { guessedWord: unsuccessfulGuess, letterMatchCount: 3 }]
+    }
   });
   test('updates state correctly for successful guess', () => {
 
