@@ -11,7 +11,7 @@ describe('getSecretWord action creator', () => {
     moxios.uninstall();
   });
   test('adds response word to state', () => {
-    const secretWord = 'party'
+    const secretWord = 'party';
     const store = storeFactory();
 
     moxios.wait(() => {
@@ -26,7 +26,6 @@ describe('getSecretWord action creator', () => {
       .then(() => {
         const newState = store.getState();
         expect(newState.secretWord).toBe(secretWord);
-      });
-
+      })
   });
 });
