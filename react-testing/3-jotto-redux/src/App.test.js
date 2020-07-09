@@ -17,3 +17,12 @@ const setup = (initialState = {}) => {
 
   return wrapper;
 }
+
+describe('redux properties', () => {
+  test('has access to `success` state', () => {
+    const success = true;
+    const wrapper = setup({ success });
+    const successProp = wrapper.instance().props.success;
+    expect(successProp).toBe(success);
+  });
+});
