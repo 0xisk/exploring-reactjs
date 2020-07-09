@@ -1,4 +1,4 @@
-import { actionTyps } from '../actions';
+import { actionTypes } from '../actions';
 
 /**
  * @function guessedWordsReducer
